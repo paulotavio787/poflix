@@ -1,11 +1,12 @@
 import React from 'react';
 import { FooterBase } from './styles';
+import logo2 from "../../assets/img/logo2.png"
 
 function Footer() {
   return (
     <FooterBase>
       <a href="https://www.alura.com.br/">
-        <img src="file:///D:/Documentos/Desktop/logo2.png" alt="Logo POFLIX" />
+        <img src={logo2} alt="Logo POFLIX" />
       </a>
       <p>
         Orgulhosamente criado durante a
