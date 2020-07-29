@@ -11,16 +11,47 @@ const Container = styled.ul`
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     transform: initial;
+    opacity: .5;
+    margin-bottom: 9.4%;
+    transition: .5s;
+    
+ 
     &:before {
+      padding-left: 5px;
+      padding-right: 5px;
       font-size: 30px;
+      color: var(--primary);
+      background-color: #050505;
+      padding-bottom: 10vh;
+      padding-top: 10vh;
+      border-radius: 5%
+
+    }
+  }
+  
+  .slick-prev,
+  .slick-next:hover{
+    opacity:.8
+  }
+  
+  @media (max-width: 800px) {
+    .slick-prev,
+    .slick-next{
+      opacity: 0;
+      display: none;
+    }
+
+    .slick-prev,
+    .slick-next:hover{
+      opacity: 0;
     }
   }
   
   .slick-prev {
-    left: 0;
+    left: 0px;
   }
   .slick-next {
     right: 16px;
@@ -33,17 +64,18 @@ export const SliderItem = styled.li`
     margin: 16px;
     width: 298px;
     height: 197px;
-    object-fit: cover;
+    object-fit: contain;
   }
 `;
 
 
-const Slider = ({ children }) => (
+const Slider = ({ children }) =>
+    (
   <Container>
     <SlickSlider {...{
       dots: false,
       infinite: false,
-      speed: 300,
+      speed: 100,
       centerMode: false,
       variableWidth: true,
       adaptiveHeight: true,
