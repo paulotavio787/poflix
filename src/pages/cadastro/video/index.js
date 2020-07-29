@@ -1,5 +1,4 @@
 import React from "react"
-import Menu from "../../../components/Menu"
 import PageDefault from "../../../components/PageDefault";
 import { Link } from "react-router-dom";
 
