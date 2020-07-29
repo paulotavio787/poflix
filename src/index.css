@@ -12,6 +12,7 @@
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
+  --darkgray: #111111;
 }
 
 html,
@@ -22,4 +23,10 @@ body {
 
 a {
   color: inherit;
-} 
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
