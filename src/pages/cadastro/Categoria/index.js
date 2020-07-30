@@ -109,7 +109,7 @@ const CadastroCategoria = () => {
                 <ul>
                     {categorias.map((Categoria, indice) => {
                         return(
-                            <li key={`${Categoria}${indice}`} className="CategoriaC">
+                            <li key={`${Categoria}${indice}`}>
                                 {Categoria.nome}
                             </li>
                         );
