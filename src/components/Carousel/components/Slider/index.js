@@ -74,7 +74,7 @@ const Slider = ({ children }) =>
   <Container>
     <SlickSlider {...{
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 100,
       centerMode: false,
       variableWidth: true,

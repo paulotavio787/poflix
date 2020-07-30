@@ -1,35 +1,53 @@
 import React from "react"
+import { Formulario } from "./styles"
 
-const FormField = ({value, onChange, type, name, label, tag}) => {
+const FormField = ({ value, onChange, type, name, label, tag, className }) => {
     if (tag === "input") {
-        return(
-            <div>
-            <label>
-                {label}
-                <input
-                    tag={tag}
-                    type={type}
-                    value={value}
-                    name={name}
-                    onChange={onChange}
-                />
-            </label>
-           </div>
+        return (
+            <Formulario>
+                <div className="box2">
+                    <label>
+                        <div className="Lab">
+                            {label}
+                        </div>
+                        <div className="box">
+                            <input
+                                className={className}
+                                tag={tag}
+                                type={type}
+                                value={value}
+                                name={name}
+                                onChange={onChange}
+                            />
+                        </div>
+                    </label>
+                </div>
+            </Formulario>
+
         );
-    }else{
-        return(
-            <div>
-            <label>
-                {label}
-                <textarea
-                    tag={tag}
-                    type={type}
-                    value={value}
-                    name={name}
-                    onChange={onChange}
-                />
-            </label>
-           </div>
+    } else {
+        return (
+            <Formulario>
+                <div className="box2">
+                    <label >
+                        <div className="Lab">
+                            {label}
+                        </div>
+                        <div className="box" >
+                            <textarea
+                                className={className}
+                                tag={tag}
+                                type={type}
+                                value={value}
+                                name={name}
+                                onChange={onChange}
+                            />
+                        </div>
+
+                    </label>
+                </div>
+            </Formulario>
+
         );
     }
 }
