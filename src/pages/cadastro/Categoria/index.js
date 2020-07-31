@@ -73,16 +73,16 @@ const CadastroCategoria = () => {
     }
 
     useEffect(() => {
-        if (window.location.href.includes('localhost')) {
-            const URL = 'http://localhost:8080/categorias';
+            const URL = window.location.hostname.includes("localhost") 
+            ? "http://localhost:8080/categorias"
+            :'https://poflix.herokuapp.com/categorias';
             fetch(URL)
                 .then(async (rds) => {
                     const resposta = await rds.json();
                     setC([
                         ...resposta,
                     ]);
-                })
-        }
+                })        
     }, []);
 
     return (
