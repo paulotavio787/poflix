@@ -15,6 +15,7 @@ function Footer() {
           Imersão React da Alura
         </a>
       </p>
+      <p>Eu disse que foi eu que fiz o site Michele</p>
     </FooterBase>
   );
 }
